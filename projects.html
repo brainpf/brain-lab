@@ -208,7 +208,7 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="research.html" class="block px-3 py-2 rounded-md text-base font-medium menu-active">Projects</a>
+                <a href="projects.html" class="block px-3 py-2 rounded-md text-base font-medium menu-active">Projects</a>
                 <a href="people.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-500">People</a>
                 <a href="https://github.com/infoTheoryLab/" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-500">Github</a>
                 <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-500">Contact</a>
@@ -242,18 +242,20 @@
 
                 <div class="project-steps">
                     <ol>
-                        <li>
-                            <strong>Step 1 — Synthetic SIMBA.</strong>
-                            Due to the sensitivity of real records, all experiments are conducted on a simulator calibrated to produce SIMBA-like csv data (Altman et al., 2023). Using these files, a compact set of fraudulent typologies (e.g., structuring/smurfing, pass-through chains, layering) is programmatically injected to obtain labelled examples.
-                        </li>
-                        <li>
-                            <strong>Step 2 — Knowledge Graph and Provenance.</strong>
-                            From the SIMBA csv files, a knowledge graph (KG) of accounts, people, agencies, and relations is constructed. The KG resolves identities, supports incremental updates, exposes multi-hop structures for visualization, and maintains pointers to original SIMBA rows and keys (Rashkin et al., 2023).
-                        </li>
-                        <li>
-                            <strong>Step 3 — Pattern adapters.</strong>
-                             Using KG-derived features, a base graph neural network with a global fraud-versus-non-fraud head is first trained to capture structural and statistical patterns of criminal behaviour. The encoder and global head are then kept for inference; for each fraud typology, a lightweight adapter and typology-specific head are attached, so that predictions combine the global decision with typology-specific scores (Pfeiffer et al., 2021; Dagdelen et al., 2024; Li et al., 2024).
-                        </li>
+                        <ul class="steps-list">
+                            <li>
+                                <strong>Step 1 — Synthetic SIMBA.</strong>
+                                Due to the sensitivity of real records, all experiments are conducted on a simulator calibrated to produce SIMBA-like csv data (Altman et al., 2023). Using these files, a compact set of fraudulent typologies (e.g., structuring/smurfing, pass-through chains, layering) is programmatically injected to obtain labelled examples.
+                            </li>
+                            <li>
+                                <strong>Step 2 — Knowledge Graph and Provenance.</strong>
+                                From the SIMBA csv files, a knowledge graph (KG) of accounts, people, agencies, and relations is constructed. The KG resolves identities, supports incremental updates, exposes multi-hop structures for visualization, and maintains pointers to original SIMBA rows and keys (Rashkin et al., 2023).
+                            </li>
+                            <li>
+                                <strong>Step 3 — Pattern adapters.</strong>
+                                Using KG-derived features, a base graph neural network with a global fraud-versus-non-fraud head is first trained to capture structural and statistical patterns of criminal behaviour. The encoder and global head are then kept for inference; for each fraud typology, a lightweight adapter and typology-specific head are attached, so that predictions combine the global decision with typology-specific scores (Pfeiffer et al., 2021; Dagdelen et al., 2024; Li et al., 2024).
+                            </li>
+                        </ul>
                     </ol>
                 </div>
             </div>
